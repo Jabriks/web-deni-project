@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deni Project | Premium Automotive Biled Lighting</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR (Glassmorphism & Sticky) -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">DENI <span class="accent-text">PROJECT</span></a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Beranda</a>
+                <a href="#products" class="nav-link">Produk</a>
+                <a href="#features" class="nav-link">Keunggulan</a>
+                <a href="#testimonials" class="nav-link">Testimoni</a>
+                <!-- Perbaikan Poin 5: Menu Kontak langsung ke WA -->
+                <a href="https://wa.me/62895331422781" target="_blank" class="nav-link contact-wa-link">Kontak <i class="fab fa-whatsapp"></i></a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Perbaikan Poin 1: Tombol Search Interaktif -->
+                <div class="search-wrapper">
+                    <button class="search-btn" id="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                    <div class="search-box" id="search-box">
+                        <input type="text" placeholder="Cari biled...">
+                    </div>
+                </div>
+
+                <!-- Perbaikan Poin 2: Tombol Keranjang Belanja -->
+                <div class="cart-icon-wrapper">
+                    <button class="cart-btn" id="cart-btn" aria-label="Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </button>
+                </div>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDE DRAWER KERANJANG BELANJA (Perbaikan Poin 2) -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h5>Keranjang Belanja</h5>
+            <button id="close-cart-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-drawer-body" id="cart-items-container">
+            <!-- Item keranjang akan di-render via JavaScript -->
+            <div class="empty-cart-msg">Keranjang kamu masih kosong.</div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">Rp 0</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">Checkout via WA <i class="fab fa-whatsapp"></i></button>
+        </div>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag">The Next Generation of Light</span>
+            <h2>Tembus Gelapnya Malam Dengan Fokus Sempurna</h2>
+            <p>Upgrade pencahayaan kendaraan Anda dengan teknologi Bi-LED Projector premium dari Deni Project. Output cahaya ultra-terang, cut-off tajam, dan daya tahan maksimal di segala cuaca.</p>
+            <div class="hero-badges">
+                <div class="hero-badge-item"><i class="fas fa-shield-alt"></i> Garansi 1 Tahun</div>
+                <div class="hero-badge-item"><i class="fas fa-bullseye"></i> Cut-off Padat & Fokus</div>
+                <div class="hero-badge-item"><i class="fas fa-bolt"></i> Ekstra Terang </div>
+            </div>
+            <a href="#products" class="cta-btn">Beli Sekarang <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- PRODUCT SECTION -->
+    <section class="products-section" id="products">
+        <div class="section-title-container">
+            <span class="section-subtitle">Koleksi Terbaik</span>
+            <h3 class="section-title">Lampu Bi-LED Premium</h3>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="products-grid">
+            <!-- Produk 1 -->
+            <div class="product-card" data-id="1" data-name="Bi-LED Deni Project X-Pro 3.0\"" data-price="2450000">
+                <div class="product-badge hot">BEST SELLER</div>
+                <div class="product-image">
+                    <div class="image-placeholder"><i class="fas fa-car-battery"></i></div>
+                </div>
+                <div class="product-info">
+                    <div class="rating-container">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text">(4.9)</span>
+                    </div>
+                    <h4>Bi-LED Deni Project X-Pro 3.0"</h4>
+                    <div class="product-specs">
+                        <span><i class="fas fa-bolt"></i> 65W</span>
+                        <span><i class="fas fa-temperature-high"></i> 5800K</span>
+                        <span><i class="fas fa-shield-alt"></i> 2 Thn</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">Rp 2.450.000</span>
+                        <button class="add-to-cart-btn">Tambah <i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 2 -->
+            <div class="product-card" data-id="2" data-name="Bi-LED Deni Project Matrix Laser 2.0\"" data-price="3800000">
+                <div class="product-badge new">NEW ARRIVAL</div>
+                <div class="product-image">
+                    <div class="image-placeholder"><i class="fas fa-lightbulb"></i></div>
+                </div>
+                <div class="product-info">
+                    <div class="rating-container">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text">(5.0)</span>
+                    </div>
+                    <h4>Bi-LED Deni Project Matrix Laser 2.0"</h4>
+                    <div class="product-specs">
+                        <span><i class="fas fa-bolt"></i> 75W</span>
+                        <span><i class="fas fa-temperature-high"></i> 6000K</span>
+                        <span><i class="fas fa-shield-alt"></i> 3 Thn</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">Rp 3.800.000</span>
+                        <button class="add-to-cart-btn">Tambah <i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="product-card" data-id="3" data-name="Bi-LED Deni Project Eco-Light 2.5\"" data-price="1650000">
+                <div class="product-badge">SLIM FIT</div>
+                <div class="product-image">
+                    <div class="image-placeholder"><i class="fas fa-bolt"></i></div>
+                </div>
+                <div class="product-info">
+                    <div class="rating-container">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-text">(4.7)</span>
+                    </div>
+                    <h4>Bi-LED Deni Project Eco-Light 2.5"</h4>
+                    <div class="product-specs">
+                        <span><i class="fas fa-bolt"></i> 45W</span>
+                        <span><i class="fas fa-temperature-high"></i> 5500K</span>
+                        <span><i class="fas fa-shield-alt"></i> 1 Thn</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">Rp 1.650.000</span>
+                        <button class="add-to-cart-btn">Tambah <i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section" id="features">
+        <div class="section-title-container">
+            <span class="section-subtitle">Mengapa Memilih Kami?</span>
+            <h3 class="section-title">Keunggulan Deni Project</h3>
+            <div class="title-line"></div>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-sun feature-icon"></i>
+                <h5>Intensitas Cahaya Maksimal</h5>
+                <p>Menggunakan chip LED standar otomotif Jerman yang menghasilkan lumens tinggi tanpa membuat silau pengendara berlawanan arah.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-wind feature-icon"></i>
+                <h5>Pendinginan Aktif Ganda</h5>
+                <p>Dilengkapi heatsink aluminum penerbangan dan kipas turbo berkecepatan tinggi untuk menjaga suhu kerja lampu tetap stabil.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-tools feature-icon"></i>
+                <h5>Pemasangan Presisi</h5>
+                <p>Didesain plug-and-play untuk mayoritas jenis reflektor motor tanpa perlu merombak kabel bawaan secara ekstrem.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL SECTION -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="section-title-container">
+            <span class="section-subtitle">Ulasan Pelanggan</span>
+            <h3 class="section-title">Kisah Sukses Modifikasi</h3>
+            <div class="title-line"></div>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Kualitas Deni Project beneran rapih. Dipakai pas hujan lebat di jalanan dan area gelap tetap kelihatan jelas. Cut-off rapi banget jadi ga disorot mobil depan."</p>
+                <div class="user-info">
+                    <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+                    <div>
+                        <h6>Andra Ramadhan</h6>
+                        <span>Pemilik PCX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Pelayanan ramah, pemasangan rapi, dan yang paling penting garansinya ga ribet. Biled Aes D2 Laser beneran bikin tampilan vario aku jadi sangar dan fungsional."</p>
+                <div class="user-info">
+                    <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+                    <div>
+                        <h6>Budi Santoso</h6>
+                        <span>Pemilik Vario LED New 160</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER -->
+    <footer class="footer" id="footer-contact">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h4>DENI <span class="accent-text">PROJECT</span></h4>
+                <p>Penyedia solusi pencahayaan otomotif Bi-LED kelas premium terpercaya di Indonesia.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <!-- Perbaikan Poin 3: Ganti YouTube ke TikTok -->
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <!-- Perbaikan Poin 4: Tombol WA Buka Tab Chat Asli, Bukan Gulir Ke Atas -->
+                    <a href="https://wa.me/62895331422781" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h5>Navigasi</h5>
+                <a href="#home">Beranda</a>
+                <a href="#products">Produk</a>
+                <a href="#features">Keunggulan</a>
+                <a href="#testimonials">Testimoni</a>
+            </div>
+            <div class="footer-contact">
+                <h5>Workshop</h5>
+                <p><i class="fas fa-map-marker-alt"></i> Bumi Pasar Kemis indah, Blok C1, No.1 Rt.7/Rw.6, Desa Suka Asih, Kec. Pasar Kemis, Kab. Tangerang, Provinsi. Banten. 15560. </p>
+                <p><i class="fas fa-envelope"></i> Info lebih lanjut hubungi kontak whatsapp owner kami </p>
+                <p><i class="fas fa-phone-alt"></i> +62 895-3314-22781 </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 zeaxline. All Rights Reserved.</p>
+            <div class="payment-methods">
+                <span title="Visa"><i class="fab fa-cc-visa"></i></span>
+                <span title="Mastercard"><i class="fab fa-cc-mastercard"></i></span>
+                <span title="Bank Transfer"><i class="fas fa-university"></i></span>
+                <span title="Digital Wallet"><i class="fas fa-wallet"></i></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION HOLDER -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
